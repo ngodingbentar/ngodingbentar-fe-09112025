@@ -1,8 +1,14 @@
 "use client"
 
+import { ApiResponse, IProfile } from "@/types";
 import Image from "next/image";
 
-const Profile = () => {
+interface IProfileProps {
+  profile: ApiResponse<IProfile>;
+}
+
+const Profile = ({ profile }: IProfileProps) => {
+  console.log("profile", profile)
   return (
     <div>
       <div>Hi, Good Morning</div>
@@ -21,19 +27,19 @@ const Profile = () => {
               height={100}
             />
             <div>
-              <span className="block text-xl font-bold">Tabay</span>
-              <span className="block text-sm text-white">UI/UX Designer</span>
+              <span className="block text-xl font-bold">{profile?.data?.name}</span>
+              <span className="block text-sm text-white">{profile?.data?.position}</span>
             </div>
           </div>
           <div className="text-right">
             <span className="block text-xs text-white">Member since</span>
-            <span className="text-lg font-semibold">01 Juni 2021</span>
+            <span className="text-lg font-semibold">01 Juni 2025</span>
           </div>
         </div>
         <div className="flex justify-between items-end">
           <div>
             <span className="block text-xs text-white">Location</span>
-            <span className="text-lg font-semibold">Kantor Sahid</span>
+            <span className="text-lg font-semibold">{profile?.data?.location}</span>
           </div>
         </div>
       </div>
