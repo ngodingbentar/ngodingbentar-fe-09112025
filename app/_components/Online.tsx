@@ -6,6 +6,8 @@ import OnlineItem from './Online.item';
 const OnlineUsers = ({ online }: { online: ApiResponse<IOnlineResponse> }) => {
   const { data } = online;
 
+  if (!online) return null;
+
   return (
     <div className="p-4">
       <h2 className="text-xl font-bold mb-4">Online</h2>
@@ -15,7 +17,7 @@ const OnlineUsers = ({ online }: { online: ApiResponse<IOnlineResponse> }) => {
           overflow-x-scroll 
           no-scrollbar
           p-4 rounded-2xl shadow-xl
-          justify-center
+          justify-start
           border-2 border-gray-100
           bg-white
         ">

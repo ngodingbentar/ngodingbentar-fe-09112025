@@ -5,9 +5,10 @@ const OnlineItem = ({ user, index }: { user: IOnline, index: number }) => {
   return (
     <div className={`shrink-0 bg-transparent text-center w-full max-w-[55px] z-11 ${index === 0 ? "" : "-ml-2.5"}`}>
       <Image
+        loading="lazy"
         width={30}
         height={30}
-        src="https://avatar.iran.liara.run/public"
+        src={user.avatar}
         alt={user.name}
         className="w-full h-full rounded-full border-2 bg-white border-white"
       />

@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 const URL =
-  process.env?.NEXT_PUBLIC_API_URL ?? "https://ngodingbentar-be-v4.vercel.app/api/v1";
+  process.env?.NEXT_PUBLIC_API_URL ??
+  "https://ngodingbentar-be-v4.vercel.app/api/v1";
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -21,6 +22,10 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "dummyimage.com",
+      },
+      {
+        protocol: "https",
+        hostname: "testingbot.com",
       },
     ],
   },
