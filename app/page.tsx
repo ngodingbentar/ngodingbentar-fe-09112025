@@ -3,11 +3,13 @@ import Header from "./_components/Header";
 import Profile from "./_components/Profile";
 import Activity from "./_components/Activity";
 import News from "./_components/News";
-import { getProfileSsr } from "@/services/profile";
+import { getOnlineSsr, getProfileSsr } from "@/services/profile";
 import { Suspense } from "react";
+import OnlineUsers from "./_components/Online";
 
 const Home = async () => {
   const profile = await getProfileSsr();
+  const online = await getOnlineSsr();
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -18,6 +20,7 @@ const Home = async () => {
           <Activity />
         </div>
         <News />
+        <OnlineUsers online={online} />
         <Navbar />
       </div>
     </Suspense>

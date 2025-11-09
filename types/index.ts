@@ -28,3 +28,15 @@ export interface IUser {
   name: string;
   avatar: string;
 }
+
+export interface IOnlineResponse {
+  users: IOnline[];
+  more_count: number;
+}
+
+export interface IOnline {
+  user_id: string;
+  name: string;
+  avatar: string;
+  location: string;
+}

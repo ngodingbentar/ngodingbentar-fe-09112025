@@ -8,7 +8,6 @@ interface IProfileProps {
 }
 
 const Profile = ({ profile }: IProfileProps) => {
-  console.log("profile", profile)
   return (
     <div>
       <div>Hi, Good Morning</div>
