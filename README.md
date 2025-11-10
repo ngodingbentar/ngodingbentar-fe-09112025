@@ -2,7 +2,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-Proyek ini dibuat menggunakan **Node.js v22.12.0.
+Proyek ini dibuat menggunakan Node.js v22.12.0
+Backend: https://github.com/ngodingbentar/ngodingbentar-be-v4
 
 First, run the development server:
 
