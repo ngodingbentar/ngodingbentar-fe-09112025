@@ -1,15 +1,23 @@
+"use client"
+
 import { IoTimeOutline } from "react-icons/io5";
 import { LuTimerReset } from "react-icons/lu";
 import { LuClock6 } from "react-icons/lu";
+import { ApiResponse, IActivity } from "../../types";
+import { formatDateInt } from "../../utils/format";
 
-const Activity = () => {
+const Activity = ({ activity }: { activity: ApiResponse<IActivity> }) => {
+  const { data } = activity;
+
+  if (!activity) return null;
+
   return (
     <div>
       <div className="font-bold">Today&rsquo;s activity</div>
       <div className="grid grid-cols-3 gap-4 mt-3">
         <div className="flex flex-col justify-center items-center">
           <IoTimeOutline size={32} className="text-red-500" />
-          <div className="font-bold mt-2">8:00 AM</div>
+          <div className="font-bold mt-2">{formatDateInt(data?.check_in || "")}</div>
           <div>Check In</div>
         </div>
         <div className="flex flex-col justify-center items-center">

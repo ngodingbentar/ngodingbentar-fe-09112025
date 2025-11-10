@@ -1,11 +1,9 @@
 import { INotification } from "@/app/_core/types";
 import { FaCoins } from "react-icons/fa6";
-import { FaArrowAltCircleRight } from "react-icons/fa";
 import { CiPill } from "react-icons/ci";
 import { IoClose } from "react-icons/io5";
 import { TiArrowRightThick } from "react-icons/ti";
 import { MdTimer } from "react-icons/md";
-import NotificationStatus from "./notification.status";
 import { useMemo } from "react";
 import { FaCheck } from "react-icons/fa";
 import { formatDateTime } from "@/app/_core/utils/format";
@@ -21,7 +19,7 @@ const NotificationItem = ({ item }: { item: INotification }) => {
       default:
         return 'bg-green-500 ';
     }
-  }, [item, item?.status]);
+  }, [item]);
 
   const IconMain = useMemo(() => {
     switch (item?.type.toLowerCase()) {
@@ -32,7 +30,7 @@ const NotificationItem = ({ item }: { item: INotification }) => {
       default:
         return <MdTimer size={25} className="text-white" />;
     }
-  }, [item, item?.type])
+  }, [item])
 
   const IconStatus = useMemo(() => {
     switch (item?.status.toLowerCase()) {
@@ -43,7 +41,7 @@ const NotificationItem = ({ item }: { item: INotification }) => {
       default:
         return <FaCheck size={10} className="text-white" />;
     }
-  }, [item, item?.status])
+  }, [item])
 
   return (
     <div className={`py-2 flex gap-2 px-6 cursor-pointer ${item?.is_read ? "bg-white" : "bg-blue-100"}`}>

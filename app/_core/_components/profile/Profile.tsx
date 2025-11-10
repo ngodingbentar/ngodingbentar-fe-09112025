@@ -10,7 +10,7 @@ interface IProfileProps {
 const Profile = ({ profile }: IProfileProps) => {
   return (
     <div>
-      <div>Hi, Good Morning</div>
+      <div className="font-bold">Hi, Good Morning</div>
       <div
         className="
         max-w-md rounded-2xl flex flex-col gap-y-4 mt-2 p-6

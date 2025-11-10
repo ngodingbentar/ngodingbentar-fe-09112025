@@ -1,7 +1,6 @@
 import { format, isToday, isYesterday } from "date-fns";
-import { id } from "date-fns/locale";
 
-function formatNewsDate(isoString: string) {
+export const formatNewsDate = (isoString: string) => {
   const date = new Date(isoString);
   const locale = "id-ID";
 
@@ -15,9 +14,7 @@ function formatNewsDate(isoString: string) {
   return { hari, tanggal };
 }
 
-export { formatNewsDate };
-
-export function formatDateTime(dateTimeString: string) {
+export const formatDateTime = (dateTimeString: string) => {
   const dateTime = new Date(dateTimeString);
   if (isNaN(dateTime.getTime())) return dateTimeString;
 
@@ -29,3 +26,19 @@ export function formatDateTime(dateTimeString: string) {
     return format(dateTime, "yyyy-MM-dd");
   }
 }
+
+export const formatDateInt = (date: string) => {
+  const checkInDate = new Date(date);
+
+  const options = {
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  } as const;;
+
+  const formatter = new Intl.DateTimeFormat("en-US", options);
+
+  const formattedTime = formatter.format(checkInDate);
+
+  return formattedTime;
+};

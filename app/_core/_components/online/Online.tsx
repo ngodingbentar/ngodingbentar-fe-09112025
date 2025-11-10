@@ -10,7 +10,7 @@ const OnlineUsers = ({ online }: { online: ApiResponse<IOnlineResponse> }) => {
 
   return (
     <div className="p-4">
-      <h2 className="text-xl font-bold mb-4">Online</h2>
+      <h2 className="font-bold mb-2">Online</h2>
       <div className="flex items-start space-x-0 overflow-x-scroll no-scrollbar p-4 rounded-2xl shadow-xl justify-start border-2 border-gray-100 bg-white">
         {data?.users.map((user, index) => (
           <OnlineItem key={user.user_id} user={user} index={index} />

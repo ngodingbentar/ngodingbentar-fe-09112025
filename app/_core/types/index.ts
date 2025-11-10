@@ -78,3 +78,9 @@ export interface IEnergy {
   name: string;
   html_id: string;
 }
+
+export interface IActivity {
+  check_in: string;
+  check_out: string;
+  status: string;
+}

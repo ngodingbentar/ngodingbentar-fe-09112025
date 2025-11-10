@@ -1,10 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import {
-  HiOutlineHome,
-  HiDocumentText,
-} from 'react-icons/hi2';
+import { HiOutlineHome, HiDocumentText } from 'react-icons/hi2';
 import { IoMdSettings } from "react-icons/io";
 import { RiLogoutBoxRFill } from "react-icons/ri";
 import { FaHome, FaCalendarCheck } from "react-icons/fa";

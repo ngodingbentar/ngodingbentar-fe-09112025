@@ -35,3 +35,14 @@ export const getOnlineSsr = async () => {
     throw new Error("Failed to fetch data");
   }
 };
+
+export const getActivitySsr = async () => {
+  try {
+    const response = await fetch(`${BASE_URL}/091125/activity`);
+    const data: Promise<ApiResponse<IOnlineResponse>> = await response.json();
+    return data;
+  } catch (error) {
+    console.error("error", error);
+    throw new Error("Failed to fetch data");
+  }
+};
