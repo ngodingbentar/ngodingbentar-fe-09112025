@@ -1,6 +1,6 @@
 "use server";
 
-import { ApiResponse, IOnlineResponse, IProfile } from "@/app/_core/types";
+import { ApiResponse, IActivity, IOnlineResponse, IProfile } from "@/app/_core/types";
 const BASE_URL = process.env?.NEXT_PUBLIC_API_URL;
 
 export const getNewsSsr = async () => {
@@ -39,7 +39,7 @@ export const getOnlineSsr = async () => {
 export const getActivitySsr = async () => {
   try {
     const response = await fetch(`${BASE_URL}/091125/activity`);
-    const data: Promise<ApiResponse<IOnlineResponse>> = await response.json();
+    const data: Promise<ApiResponse<IActivity>> = await response.json();
     return data;
   } catch (error) {
     console.error("error", error);
