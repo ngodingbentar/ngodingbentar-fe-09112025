@@ -1,6 +1,6 @@
 "use server";
 
-import { ApiResponse, IOnlineResponse, IProfile } from "@/types";
+import { ApiResponse, IOnlineResponse, IProfile } from "@/app/_core/types";
 const BASE_URL = process.env?.NEXT_PUBLIC_API_URL;
 
 export const getNewsSsr = async () => {

@@ -1,4 +1,4 @@
-import useNotificationsStore from "@/stores/notifications";
+import useNotificationsStore from "@/app/_core/stores/notifications";
 import NotificationItem from "./notification.item";
 
 const Notifications = () => {

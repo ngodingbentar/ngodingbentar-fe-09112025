@@ -5,8 +5,8 @@ import { Autoplay, Pagination } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { INews } from '@/types';
-import NewItem from './New.item';
+import { INews } from '@/app/_core/types';
+import NewItem from './NewItem';
 
 interface INewsProps {
   data: INews[];

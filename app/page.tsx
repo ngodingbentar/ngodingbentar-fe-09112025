@@ -1,18 +1,18 @@
-import Header from "./_components/Header";
-import Profile from "./_components/Profile";
-import Activity from "./_components/Activity";
-import News from "./_components/News";
-import { getOnlineSsr, getProfileSsr } from "@/services/profile";
+import Header from "./_core/_components/header/Header";
+import Profile from "./_core/_components/profile/Profile";
+import Activity from "./_core/_components/activity/Activity";
+import News from "./_core/_components/news/News";
+import { getOnlineSsr, getProfileSsr } from "@/app/_core/services/profile";
 import { Suspense } from "react";
-import OnlineUsers from "./_components/Online";
-import BottomNav from "./_components/Navbar/BottomNav";
+import OnlineUsers from "./_core/_components/online/Online";
+import BottomNav from "./_core/_components/nav/BottomNav";
 
 const Home = async () => {
   const profile = await getProfileSsr();
   const online = await getOnlineSsr();
 
   return (
-    <Suspense fallback={<div className="w-full h-screen justify-center items-center">Loading...</div>}>
+    <Suspense fallback={<div className="flex w-full h-screen justify-center items-center">Loading...</div>}>
       <div className="pb-16">
         <Header />
         <div className="px-6 flex flex-col gap-4">
@@ -21,7 +21,6 @@ const Home = async () => {
         </div>
         <News />
         <OnlineUsers online={online} />
-        {/* <Navbar /> */}
         <BottomNav />
       </div>
     </Suspense>

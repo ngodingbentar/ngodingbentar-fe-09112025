@@ -1,4 +1,4 @@
-import { INews, INotification, IRoles } from "@/types";
+import { INews, INotification, IRoles } from "@/app/_core/types";
 
 export const getNews = async () => {
   const response = await fetch("/api/091125/news");

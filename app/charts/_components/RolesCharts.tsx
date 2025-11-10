@@ -1,4 +1,4 @@
-import { IRoles } from "@/types";
+import { IRoles } from "@/app/_core/types";
 import { useMemo } from "react";
 import {
   BarChart,

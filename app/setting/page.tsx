@@ -1,6 +1,6 @@
-import HeaderBack from "../_components/Header.back";
+import HeaderBack from "../_core/_components/header/HeaderBack";
 
-const NotificationPage = () => {
+const SettingPage = () => {
 
   return (
     <div>
@@ -9,4 +9,4 @@ const NotificationPage = () => {
   )
 }
 
-export default NotificationPage;
+export default SettingPage;

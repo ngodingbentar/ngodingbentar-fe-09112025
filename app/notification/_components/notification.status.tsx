@@ -1,4 +1,4 @@
-import { INotification } from "@/types";
+import { INotification } from "@/app/_core/types";
 import { FaCoins } from "react-icons/fa6";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";

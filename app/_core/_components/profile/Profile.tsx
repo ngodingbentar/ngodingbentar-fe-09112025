@@ -1,6 +1,6 @@
 "use client"
 
-import { ApiResponse, IProfile } from "@/types";
+import { ApiResponse, IProfile } from "@/app/_core/types";
 import Image from "next/image";
 
 interface IProfileProps {

@@ -1,4 +1,4 @@
-import { INotification } from "@/types";
+import { INotification } from "@/app/_core/types";
 import { FaCoins } from "react-icons/fa6";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import { CiPill } from "react-icons/ci";
@@ -8,7 +8,7 @@ import { MdTimer } from "react-icons/md";
 import NotificationStatus from "./notification.status";
 import { useMemo } from "react";
 import { FaCheck } from "react-icons/fa";
-import { formatDateTime } from "@/utils/format";
+import { formatDateTime } from "@/app/_core/utils/format";
 const NotificationItem = ({ item }: { item: INotification }) => {
   const { content } = item;
 

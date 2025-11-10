@@ -1,10 +1,10 @@
 "use client"
 
-import { getNotifications } from "@/services";
+import { getNotifications } from "@/app/_core/services";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect } from "react";
-import HeaderBack from "../_components/Header.back";
-import useNotificationsStore from "@/stores/notifications";
+import HeaderBack from "../_core/_components/header/HeaderBack";
+import useNotificationsStore from "@/app/_core/stores/notifications";
 import Notifications from "./_components/notifications";
 
 const NotificationPage = () => {

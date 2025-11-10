@@ -1,9 +1,9 @@
 "use client"
 
 import { useQuery } from "@tanstack/react-query";
-import { getRoles } from "@/services";
+import { getRoles } from "@/app/_core/services";
 import { RolesCharts } from "./_components/RolesCharts";
-import HeaderBack from "../_components/Header.back";
+import HeaderBack from "../_core/_components/header/HeaderBack";
 
 const ChartsPage = () => {
   const { data } = useQuery({

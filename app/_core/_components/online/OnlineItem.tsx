@@ -1,4 +1,4 @@
-import { IOnline } from "@/types";
+import { IOnline } from "@/app/_core/types";
 import Image from "next/image";
 
 const OnlineItem = ({ user, index }: { user: IOnline, index: number }) => {

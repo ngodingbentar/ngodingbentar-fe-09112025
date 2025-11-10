@@ -1,5 +1,5 @@
-import { INews } from "@/types";
-import { formatNewsDate } from "@/utils/format";
+import { INews } from "@/app/_core/types";
+import { formatNewsDate } from "@/app/_core/utils/format";
 import Image from "next/image";
 
 const NewItem = ({ item }: { item: INews }) => {

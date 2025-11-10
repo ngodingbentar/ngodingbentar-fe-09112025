@@ -1,7 +1,7 @@
 import { create, StateCreator } from "zustand";
 import { persist } from "zustand/middleware";
 
-import { INotification } from "@/types";
+import { INotification } from "@/app/_core/types";
 
 interface IToken {
   notifications: INotification[] | null;
