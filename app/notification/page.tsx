@@ -20,7 +20,7 @@ const NotificationPage = () => {
 
   return (
     <div>
-      <HeaderBack />
+      <HeaderBack title="Notifications" />
       <Notifications />
     </div>
   )

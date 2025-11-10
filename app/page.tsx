@@ -12,7 +12,7 @@ const Home = async () => {
   const online = await getOnlineSsr();
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div className="w-full h-screen justify-center items-center">Loading...</div>}>
       <div className="pb-16">
         <Header />
         <div className="px-6 flex flex-col gap-4">

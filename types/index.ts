@@ -42,15 +42,39 @@ export interface IOnline {
 }
 
 export interface INotification {
-  id: string
-  type: string
-  status: string
-  content: MessageContent[]
-  created_at: string
-  is_read: boolean
+  id: string;
+  type: string;
+  status: string;
+  content: MessageContent[];
+  created_at: string;
+  is_read: boolean;
 }
 
 export interface MessageContent {
-  type: string
-  content: string
+  type: string;
+  content: string;
+}
+
+export interface IRoles {
+  Building: IBuilding[];
+  Dashboard: IDashboard[];
+  Energy: IEnergy[];
+}
+
+export interface IBuilding {
+  id: number;
+  name: string;
+  html_id: string;
+}
+
+export interface IDashboard {
+  id: number;
+  name: string;
+  html_id: string;
+}
+
+export interface IEnergy {
+  id: number;
+  name: string;
+  html_id: string;
 }
