@@ -13,9 +13,9 @@ const Home = async () => {
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <div>
+      <div className="pb-16">
+        <Header />
         <div className="px-6 flex flex-col gap-4">
-          <Header />
           <Profile profile={profile} />
           <Activity />
         </div>

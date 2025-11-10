@@ -40,3 +40,17 @@ export interface IOnline {
   avatar: string;
   location: string;
 }
+
+export interface INotification {
+  id: string
+  type: string
+  status: string
+  content: MessageContent[]
+  created_at: string
+  is_read: boolean
+}
+
+export interface MessageContent {
+  type: string
+  content: string
+}

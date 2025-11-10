@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import NewsSlider from "./NewsSlider";
 
 const News = () => {
-  const { data, isLoading } = useQuery({ // <-- Mulai dengan satu kurung kurawal
+  const { data, isLoading } = useQuery({
     queryKey: ['news'],
     queryFn: getNews,
   });

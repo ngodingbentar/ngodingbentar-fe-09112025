@@ -13,9 +13,8 @@ interface INewsProps {
 }
 
 const NewsSlider = ({ data }: INewsProps) => {
-  console.log("data news", data)
   return (
-    <div className="w-full py-4">
+    <div className="w-full pt-4">
       <Swiper
         modules={[Autoplay, Pagination]}
         slidesPerView={1.15}

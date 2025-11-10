@@ -28,7 +28,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex justify-center`}
       >
-        <div className="w-full h-screen bg-[#fafafa] max-w-[500px] overflow-y-scroll no-scrollbar">
+        <div className="w-full h-screen bg-[#fafafa] max-w-[500px] overflow-y-scroll no-scrollbar pb-12">
           <Provider>{children}</Provider>
         </div>
       </body>
