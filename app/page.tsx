@@ -1,4 +1,3 @@
-import Navbar from "./_components/Navbar";
 import Header from "./_components/Header";
 import Profile from "./_components/Profile";
 import Activity from "./_components/Activity";
@@ -6,6 +5,7 @@ import News from "./_components/News";
 import { getOnlineSsr, getProfileSsr } from "@/services/profile";
 import { Suspense } from "react";
 import OnlineUsers from "./_components/Online";
+import BottomNav from "./_components/Navbar/BottomNav";
 
 const Home = async () => {
   const profile = await getProfileSsr();
@@ -21,7 +21,8 @@ const Home = async () => {
         </div>
         <News />
         <OnlineUsers online={online} />
-        <Navbar />
+        {/* <Navbar /> */}
+        <BottomNav />
       </div>
     </Suspense>
   );
